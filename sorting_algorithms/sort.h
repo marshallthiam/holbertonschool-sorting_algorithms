@@ -1,13 +1,19 @@
-#ifndef SORT_H
-#define SORT_H
+#include <stdio.h>
 
-#include <stddef.h>  // pour size_t
-#include <stdio.h>   // pour printf dans print_array
+/**
+ * print_array - Imprime un tableau d'entiers
+ * @array: le tableau à imprimer
+ * @size: la taille du tableau
+ */
+void print_array(const int *array, size_t size)
+{
+    size_t i;
 
-/* Fonction de tri */
-void bubble_sort(int *array, size_t size);
-
-/* Fonction utilitaire pour afficher un tableau d'entiers */
-void print_array(const int *array, size_t size);
-
-#endif /* SORT_H */
+    for (i = 0; i < size; i++)
+    {
+        printf("%d", array[i]);
+        if (i < size - 1)
+            printf(", ");
+    }
+    printf("\n");
+}
