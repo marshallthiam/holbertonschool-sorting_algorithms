@@ -7,6 +7,23 @@
  *
  * Return: Always 0
  */
+#include <stdio.h>
+
+/* Add these prototypes if no header file */
+void print_array(const int *array, size_t size);
+void selection_sort(int *array, size_t size);
+
+int main(void)
+{
+    int array[] = {64, 25, 12, 22, 11};
+    size_t n = sizeof(array) / sizeof(array[0]);
+
+    print_array(array, n);
+    selection_sort(array, n);
+    print_array(array, n);
+
+    return 0;
+}
 int main(void)
 {
     listint_t *list = NULL;
