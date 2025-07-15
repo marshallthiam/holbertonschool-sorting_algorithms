@@ -22,10 +22,6 @@ int main(void)
     selection_sort(array, n);
     print_array(array, n);
 
-    return 0;
-}
-int main(void)
-{
     listint_t *list = NULL;
 
     add_node_end(&list, 19);
